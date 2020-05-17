@@ -1,4 +1,4 @@
-export default (db) => (req, res) => {
+export const handleProfileGet = (db) => (req, res) => {
 	const { id } = req.params;
 	db
 		.select('*')
