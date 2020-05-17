@@ -10,8 +10,8 @@ import { handleImageEntries, handleApiCall } from './controllers/image.js';
 const app = express();
 
 app.use(cors());
-app.use(express.urlencoded({ extended: false, limit: '50mb', parameterLimit: 100000 }));
-app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ extended: false, limit: '10mb' }));
+app.use(express.json({ limit: '10mb' }));
 
 app.post('/signin', handleSignin(db, bcrypt));
 app.post('/register', handleRegister(db, bcrypt));
