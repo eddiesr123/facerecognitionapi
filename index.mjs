@@ -13,6 +13,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false, limit: '10mb' }));
 app.use(express.json({ limit: '10mb' }));
 
+app.get('/', (req, res) => res.send('It is Working!'));
 app.post('/signin', handleSignin(db, bcrypt));
 app.post('/register', handleRegister(db, bcrypt));
 app.get('/profile/:id', handleProfileGet(db));
